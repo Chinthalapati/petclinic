@@ -8,9 +8,6 @@ spec:
   replicas: 1
   strategy:
     type: RollingUpdate
-    rollingUpdate:
-    maxSurge: 0
-    maxUnavailable: 1
   minReadySeconds: 5
   revisionHistoryLimit: 10
   selector:
@@ -34,8 +31,6 @@ spec:
             memory: '1Gi'
         ports:
         - containerPort: 8080
-      imagePullSecrets:
-      - name: regcred
 
 
 
